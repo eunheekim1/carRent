@@ -35,14 +35,22 @@
 =================================================================
 
 3. 서비스 가동
+
 - 환경설정
+
 pip install httpie
+
 docker-compose up  
+
 mvn spring-boot:run
+
 sudo apt install net-tools
 
+
 - port조회
+
 netstat -lntp | grep :808
+
 
 - 마이크로 서비스 가동
 
