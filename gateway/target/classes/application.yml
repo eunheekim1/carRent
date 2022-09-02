@@ -12,7 +12,7 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/carRents/**, 
-        - id: carManagement
+        - id: carMgmt
           uri: http://localhost:8082
           predicates:
             - Path=/carMgmts/**, 
@@ -20,7 +20,7 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=, /totalCarLists/**
-        - id: userManagement
+        - id: userMgmt
           uri: http://localhost:8084
           predicates:
             - Path=/memberMgmts/**, 
@@ -55,16 +55,16 @@ spring:
           uri: http://carRental:8080
           predicates:
             - Path=/carRents/**, 
-        - id: carManagement
-          uri: http://carManagement:8080
+        - id: carMgmt
+          uri: http://carMgmt:8080
           predicates:
             - Path=/carMgmts/**, 
         - id: view
           uri: http://view:8080
           predicates:
             - Path=, /totalCarLists/**
-        - id: userManagement
-          uri: http://userManagement:8080
+        - id: userMgmt
+          uri: http://userMgmt:8080
           predicates:
             - Path=/memberMgmts/**, 
         - id: payment

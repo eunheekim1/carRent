@@ -49,8 +49,8 @@ public class CarRent {
     }
 
     public void reserveCancel() {
-        Reservecancelled reservecancelled = new Reservecancelled(this);
-        reservecancelled.publishAfterCommit();
+        ReserveCancelled reserveCancelled = new ReserveCancelled(this);
+        reserveCancelled.publishAfterCommit();
     }
 
     public void returnCar() {

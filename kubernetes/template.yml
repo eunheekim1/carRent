@@ -43,22 +43,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: carManagement
+  name: carMgmt
   labels:
-    app: carManagement
+    app: carMgmt
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: carManagement
+      app: carMgmt
   template:
     metadata:
       labels:
-        app: carManagement
+        app: carMgmt
     spec:
       containers:
-        - name: carManagement
-          image: username/carManagement:latest
+        - name: carMgmt
+          image: username/carMgmt:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -123,22 +123,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: userManagement
+  name: userMgmt
   labels:
-    app: userManagement
+    app: userMgmt
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: userManagement
+      app: userMgmt
   template:
     metadata:
       labels:
-        app: userManagement
+        app: userMgmt
     spec:
       containers:
-        - name: userManagement
-          image: username/userManagement:latest
+        - name: userMgmt
+          image: username/userMgmt:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -222,15 +222,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: carManagement
+  name: carMgmt
   labels:
-    app: carManagement
+    app: carMgmt
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: carManagement
+    app: carMgmt
 
 
 ---
@@ -256,15 +256,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: userManagement
+  name: userMgmt
   labels:
-    app: userManagement
+    app: userMgmt
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: userManagement
+    app: userMgmt
 
 
 ---
