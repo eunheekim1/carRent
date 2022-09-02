@@ -12,12 +12,9 @@ public class Reserved extends AbstractEvent {
     private Long rentId;
     private String carId;
     private String userId;
-    private Date startDate;
-    private Date endDate;
+    private Date rentStartDate;
+    private Date rentEndDate;
     private Date regDate;
-    private String status;
-    private String approverId;
-    private Double rentCost;
     // keep
 
 }

@@ -9,14 +9,13 @@ import lombok.*;
 @ToString
 public class Registered extends AbstractEvent {
 
-    private Long id;
     private Long userId;
     private String userName;
     private Date birthDate;
     private Date phoneNo;
     private Integer age;
 
-    public Registered(MemberManagementSystem aggregate) {
+    public Registered(MemberMgmt aggregate) {
         super(aggregate);
     }
 

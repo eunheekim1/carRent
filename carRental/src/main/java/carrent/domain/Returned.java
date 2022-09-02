@@ -12,7 +12,7 @@ public class Returned extends AbstractEvent {
     private Long rentId;
     private String rentStatus;
 
-    public Returned(CarRentSystem aggregate) {
+    public Returned(CarRent aggregate) {
         super(aggregate);
     }
 

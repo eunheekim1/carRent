@@ -12,7 +12,7 @@ public class Registercancelled extends AbstractEvent {
     private Long carId;
     private Boolean status;
 
-    public Registercancelled(VehicleManagementSystem aggregate) {
+    public Registercancelled(CarMgmt aggregate) {
         super(aggregate);
     }
 

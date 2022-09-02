@@ -39,26 +39,26 @@
 
                     <v-list-item
                         class="px-2"
-                        key="carRentSystems"
-                        to="/carRentSystems"
+                        key="carRents"
+                        to="/carRents"
                         @click="changeUrl()"
                         color="deep-purple lighten-2"
                         style="font-weight:700;"
                     >
-                        CarRentSystem
+                        CarRent
                     </v-list-item>
 
 
 
                     <v-list-item
                         class="px-2"
-                        key="vehicleManagementSystems"
-                        to="/vehicleManagementSystems"
+                        key="carMgmts"
+                        to="/carMgmts"
                         @click="changeUrl()"
                         color="deep-purple lighten-2"
                         style="font-weight:700;"
                     >
-                        VehicleManagementSystem
+                        CarMgmt
                     </v-list-item>
 
 
@@ -76,13 +76,26 @@
 
                     <v-list-item
                         class="px-2"
-                        key="memberManagementSystems"
-                        to="/memberManagementSystems"
+                        key="memberMgmts"
+                        to="/memberMgmts"
                         @click="changeUrl()"
                         color="deep-purple lighten-2"
                         style="font-weight:700;"
                     >
-                        MemberManagementSystem
+                        MemberMgmt
+                    </v-list-item>
+
+
+
+                    <v-list-item
+                        class="px-2"
+                        key="payments"
+                        to="/payments"
+                        @click="changeUrl()"
+                        color="deep-purple lighten-2"
+                        style="font-weight:700;"
+                    >
+                        Payment
                     </v-list-item>
 
 
@@ -117,13 +130,13 @@
                                     class="mx-auto"
                                     outlined
                                     rounded
-                                    key="carRentSystems"
-                                    to="/carRentSystems"
+                                    key="carRents"
+                                    to="/carRents"
                                     @click="changeUrl()"
                                     color="deep-purple lighten-2"
                                     style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
                                 >
-                                    CarRentSystem
+                                    CarRent
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
@@ -147,13 +160,13 @@
                                     class="mx-auto"
                                     outlined
                                     rounded
-                                    key="vehicleManagementSystems"
-                                    to="/vehicleManagementSystems"
+                                    key="carMgmts"
+                                    to="/carMgmts"
                                     @click="changeUrl()"
                                     color="deep-purple lighten-2"
                                     style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
                                 >
-                                    VehicleManagementSystem
+                                    CarMgmt
                                 </v-btn>
                             </v-card-actions>
                         </v-card>
@@ -207,13 +220,43 @@
                                     class="mx-auto"
                                     outlined
                                     rounded
-                                    key="memberManagementSystems"
-                                    to="/memberManagementSystems"
+                                    key="memberMgmts"
+                                    to="/memberMgmts"
                                     @click="changeUrl()"
                                     color="deep-purple lighten-2"
                                     style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
                                 >
-                                    MemberManagementSystem
+                                    MemberMgmt
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+
+                        <v-card
+                            class="mx-auto"
+                            style="height:300px; width:300px; margin-bottom:20px;"
+                            outlined
+                        >
+                            <v-list-item>
+                                <v-list-item-avatar 
+                                    class="mx-auto"
+                                    size="80"
+                                    style="margin-top:80px;"
+                                ><span class="mdi mdi-apps" style="font-size:60px; color:#9575CD;"></span>
+                                </v-list-item-avatar>
+                            </v-list-item>
+
+                            <v-card-actions>
+                                <v-btn 
+                                    class="mx-auto"
+                                    outlined
+                                    rounded
+                                    key="payments"
+                                    to="/payments"
+                                    @click="changeUrl()"
+                                    color="deep-purple lighten-2"
+                                    style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
+                                >
+                                    Payment
                                 </v-btn>
                             </v-card-actions>
                         </v-card>

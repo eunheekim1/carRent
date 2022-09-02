@@ -12,7 +12,7 @@ public class Registered extends AbstractEvent {
     private Long carId;
     private Boolean status;
 
-    public Registered(VehicleManagementSystem aggregate) {
+    public Registered(CarMgmt aggregate) {
         super(aggregate);
     }
 

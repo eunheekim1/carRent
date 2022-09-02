@@ -12,7 +12,7 @@ public class Reservecancelled extends AbstractEvent {
     private Long rentId;
     private String rentStatus;
 
-    public Reservecancelled(CarRentSystem aggregate) {
+    public Reservecancelled(CarRent aggregate) {
         super(aggregate);
     }
 

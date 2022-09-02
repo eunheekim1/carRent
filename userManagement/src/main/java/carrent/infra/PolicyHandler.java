@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class PolicyHandler {
 
     @Autowired
-    MemberManagementSystemRepository memberManagementSystemRepository;
+    MemberMgmtRepository memberMgmtRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
@@ -26,14 +26,14 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='Reserved'"
     )
-    public void wheneverReserved_Reservation(@Payload Reserved reserved) {
+    public void wheneverReserved_MileageUpdate(@Payload Reserved reserved) {
         Reserved event = reserved;
         System.out.println(
-            "\n\n##### listener Reservation : " + reserved + "\n\n"
+            "\n\n##### listener MileageUpdate : " + reserved + "\n\n"
         );
 
         // Sample Logic //
-        MemberManagementSystem.reservation(event);
+        MemberMgmt.mileageUpdate(event);
     }
     // keep
 

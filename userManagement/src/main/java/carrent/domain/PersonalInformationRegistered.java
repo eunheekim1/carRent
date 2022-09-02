@@ -9,16 +9,15 @@ import lombok.*;
 @ToString
 public class PersonalInformationRegistered extends AbstractEvent {
 
-    private Long id;
+    private Long userId;
     private String userName;
     private Date birthDate;
     private Date phoneNo;
     private String licenseNo;
     private String address;
-    private Long userId;
     private Integer age;
 
-    public PersonalInformationRegistered(MemberManagementSystem aggregate) {
+    public PersonalInformationRegistered(MemberMgmt aggregate) {
         super(aggregate);
     }
 

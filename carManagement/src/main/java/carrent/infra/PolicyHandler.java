@@ -17,42 +17,10 @@ import org.springframework.stereotype.Service;
 public class PolicyHandler {
 
     @Autowired
-    VehicleManagementSystemRepository vehicleManagementSystemRepository;
+    CarMgmtRepository carMgmtRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='Registered'"
-    )
-    public void wheneverRegistered_CarStatusChange(
-        @Payload Registered registered
-    ) {
-        Registered event = registered;
-        System.out.println(
-            "\n\n##### listener CarStatusChange : " + registered + "\n\n"
-        );
-
-        // Sample Logic //
-        VehicleManagementSystem.carStatusChange(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='Registercancelled'"
-    )
-    public void wheneverRegistercancelled_CarStatusChange(
-        @Payload Registercancelled registercancelled
-    ) {
-        Registercancelled event = registercancelled;
-        System.out.println(
-            "\n\n##### listener CarStatusChange : " + registercancelled + "\n\n"
-        );
-
-        // Sample Logic //
-        VehicleManagementSystem.carStatusChange(event);
-    }
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
@@ -65,7 +33,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        VehicleManagementSystem.carStatusChange(event);
+        CarMgmt.carStatusChange(event);
     }
 
     @StreamListener(
@@ -79,7 +47,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        VehicleManagementSystem.carStatusChange(event);
+        CarMgmt.carStatusChange(event);
     }
 
     @StreamListener(
@@ -93,7 +61,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        VehicleManagementSystem.carStatusChange(event);
+        CarMgmt.carStatusChange(event);
     }
 
     @StreamListener(
@@ -109,7 +77,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        VehicleManagementSystem.carStatusChange(event);
+        CarMgmt.carStatusChange(event);
     }
     // keep
 
