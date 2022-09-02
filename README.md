@@ -1,7 +1,7 @@
 # carRent
 
 
-서비스 시나리오 
+1. 서비스 시나리오 
 
 
 기능적 요구사항
@@ -24,3 +24,27 @@
 
 성능
 1. 사용자는 전체 차량 대여 가능 목록을 실시간으로 확인할 수 있어야 한다.
+=================================================================
+
+2. 모델링
+
+=================================================================
+
+3. 서비스 가동
+- 환경설정
+pip install httpie
+docker-compose up  
+mvn spring-boot:run
+sudo apt install net-tools
+
+- port조회
+netstat -lntp | grep :808
+
+- 마이크로 서비스 가동
+http localhost:8081/carRentSystems
+http localhost:8082/vehicleManagementSystems
+http localhost:8082/vehicleManagementSystems carId=1
+http localhost:8083/totalCarLists
+http localhost:8084/memberManagementSystems
+
+
