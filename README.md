@@ -45,8 +45,9 @@ netstat -lntp | grep :808
 - 마이크로 서비스 가동
 http localhost:8081/carRentSystems
 http localhost:8082/vehicleManagementSystems
-http localhost:8082/vehicleManagementSystems carId=1
 http localhost:8083/totalCarLists
 http localhost:8084/memberManagementSystems
+
+http localhost:8082/vehicleManagementSystems carId=1
 
 
