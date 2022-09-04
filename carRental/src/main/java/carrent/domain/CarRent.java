@@ -26,7 +26,7 @@ public class CarRent {
 
     private Date regDate;
 
-    private String rentStatus;
+    private String status;
 
     @PostPersist
     public void onPostPersist() {

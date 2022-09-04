@@ -33,7 +33,7 @@
                                 RegDate :  {{item.regDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                RentStatus :  {{item.rentStatus }}
+                                Status :  {{item.status }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

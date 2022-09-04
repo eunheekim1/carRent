@@ -15,6 +15,7 @@ public class Reserved extends AbstractEvent {
     private Date rentStartDate;
     private Date rentEndDate;
     private Date regDate;
+    private String status;
     // keep
 
 }

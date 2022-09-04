@@ -25,7 +25,7 @@
                             [ RentStartDate :  {{data.rentStartDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ RentEndDate :  {{data.rentEndDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ RegDate :  {{data.regDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ RentStatus :  {{data.rentStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -113,7 +113,7 @@
                 'rentStartDate': '2022-09-04',
                 'rentEndDate': '2022-09-04',
                 'regDate': '2022-09-04',
-                'rentStatus': '',
+                'status': '',
             }
         },
         methods: {

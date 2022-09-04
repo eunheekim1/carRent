@@ -24,7 +24,7 @@
                 <Date label="RegDate" v-model="item.regDate" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="RentStatus" v-model="item.rentStatus" :editMode="editMode" @change="change" />
+                <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

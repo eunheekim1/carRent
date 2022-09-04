@@ -74,7 +74,7 @@
                 'rentStartDate': '2022-09-04',
                 'rentEndDate': '2022-09-04',
                 'regDate': '2022-09-04',
-                'rentStatus': '',
+                'status': '',
             }
         },
         methods:{
