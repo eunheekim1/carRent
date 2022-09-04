@@ -15,6 +15,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -24,6 +25,7 @@
                             [ RentStartDate :  {{data.rentStartDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ RentEndDate :  {{data.rentEndDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ RegDate :  {{data.regDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ RentStatus :  {{data.rentStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -108,9 +110,10 @@
                 'rentId': 0,
                 'carId': '',
                 'userId': '',
-                'rentStartDate': '2022-09-02',
-                'rentEndDate': '2022-09-02',
-                'regDate': '2022-09-02',
+                'rentStartDate': '2022-09-04',
+                'rentEndDate': '2022-09-04',
+                'regDate': '2022-09-04',
+                'rentStatus': '',
             }
         },
         methods: {

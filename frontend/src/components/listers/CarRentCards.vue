@@ -71,9 +71,10 @@
                 'rentId': 0,
                 'carId': '',
                 'userId': '',
-                'rentStartDate': '2022-09-02',
-                'rentEndDate': '2022-09-02',
-                'regDate': '2022-09-02',
+                'rentStartDate': '2022-09-04',
+                'rentEndDate': '2022-09-04',
+                'regDate': '2022-09-04',
+                'rentStatus': '',
             }
         },
         methods:{

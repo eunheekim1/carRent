@@ -26,6 +26,8 @@ public class CarRent {
 
     private Date regDate;
 
+    private String rentStatus;
+
     @PostPersist
     public void onPostPersist() {
         //Following code causes dependency to external APIs
