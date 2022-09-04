@@ -17,7 +17,7 @@
         </v-card-title >
 
         <v-card-text>
-            <Number label="UserId" v-model="value.userId" :editMode="editMode"/>
+            <String label="UserId" v-model="value.userId" :editMode="editMode"/>
             <String label="UserName" v-model="value.userName" :editMode="editMode"/>
             <Date label="BirthDate" v-model="value.birthDate" :editMode="editMode"/>
             <Date label="PhoneNo" v-model="value.phoneNo" :editMode="editMode"/>
@@ -169,7 +169,7 @@
 
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e
@@ -191,7 +191,7 @@
 
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e
@@ -204,7 +204,7 @@
             async registration() {
                 try {
                     if(!this.offline) {
-                        var temp = await axios.put(axios.fixUrl(this.value._links.registration.href))
+                        var temp = await axios.put(axios.fixUrl(this.value._links['registration'].href))
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }
@@ -213,7 +213,26 @@
                     this.editMode = false;
                 } catch(e) {
                     this.snackbar.status = true
-                    if(e.response.data.message) {
+                    if(e.response && e.response.data.message) {
+                        this.snackbar.text = e.response.data.message
+                    } else {
+                        this.snackbar.text = e
+                    }
+                }
+            },
+            async () {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links[''].href))
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                } catch(e) {
+                    this.snackbar.status = true
+                    if(e.response && e.response.data.message) {
                         this.snackbar.text = e.response.data.message
                     } else {
                         this.snackbar.text = e

@@ -13,7 +13,11 @@ import lombok.Data;
 @Data
 public class MemberMgmt {
 
-    private Long userId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String userId;
 
     private String userName;
 
