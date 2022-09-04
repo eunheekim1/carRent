@@ -11,19 +11,23 @@ spring:
         - id: carRental
           uri: http://localhost:8081
           predicates:
-            - Path=/carRentSystems/**, 
-        - id: carManagement
+            - Path=/carRents/**, 
+        - id: carMgmt
           uri: http://localhost:8082
           predicates:
-            - Path=/vehicleManagementSystems/**, 
+            - Path=/carMgmts/**, 
         - id: view
           uri: http://localhost:8083
           predicates:
             - Path=, /totalCarLists/**
-        - id: userManagement
+        - id: userMgmt
           uri: http://localhost:8084
           predicates:
-            - Path=/memberManagementSystems/**, 
+            - Path=/memberMgmts/**, 
+        - id: payment
+          uri: http://localhost:8085
+          predicates:
+            - Path=/payments/**, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -50,19 +54,23 @@ spring:
         - id: carRental
           uri: http://carRental:8080
           predicates:
-            - Path=/carRentSystems/**, 
-        - id: carManagement
-          uri: http://carManagement:8080
+            - Path=/carRents/**, 
+        - id: carMgmt
+          uri: http://carMgmt:8080
           predicates:
-            - Path=/vehicleManagementSystems/**, 
+            - Path=/carMgmts/**, 
         - id: view
           uri: http://view:8080
           predicates:
             - Path=, /totalCarLists/**
-        - id: userManagement
-          uri: http://userManagement:8080
+        - id: userMgmt
+          uri: http://userMgmt:8080
           predicates:
-            - Path=/memberManagementSystems/**, 
+            - Path=/memberMgmts/**, 
+        - id: payment
+          uri: http://payment:8080
+          predicates:
+            - Path=/payments/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

@@ -9,17 +9,16 @@ import lombok.*;
 @ToString
 public class Reserved extends AbstractEvent {
 
+    private Long id;
     private Long rentId;
-    private String carId;
-    private String userId;
-    private Date startDate;
-    private Date endDate;
+    private Long carId;
+    private Long userId;
+    private Date rentStartDate;
+    private Date rentEndDate;
     private Date regDate;
     private String status;
-    private String approverId;
-    private Double rentCost;
 
-    public Reserved(CarRentSystem aggregate) {
+    public Reserved(CarRent aggregate) {
         super(aggregate);
     }
 

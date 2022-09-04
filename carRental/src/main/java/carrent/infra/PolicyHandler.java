@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class PolicyHandler {
 
     @Autowired
-    CarRentSystemRepository carRentSystemRepository;
+    CarRentRepository carRentRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}

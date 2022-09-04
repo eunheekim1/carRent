@@ -7,16 +7,16 @@ import lombok.*;
 
 @Data
 @ToString
-public class Reservecancelled extends AbstractEvent {
+public class ReserveCancelled extends AbstractEvent {
 
     private Long rentId;
-    private String rentStatus;
+    private String status;
 
-    public Reservecancelled(CarRentSystem aggregate) {
+    public ReserveCancelled(CarRent aggregate) {
         super(aggregate);
     }
 
-    public Reservecancelled() {
+    public ReserveCancelled() {
         super();
     }
     // keep

@@ -5,17 +5,20 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import CarRentSystemManager from "./components/listers/CarRentSystemCards"
-import CarRentSystemDetail from "./components/listers/CarRentSystemDetail"
+import CarRentManager from "./components/listers/CarRentCards"
+import CarRentDetail from "./components/listers/CarRentDetail"
 
-import VehicleManagementSystemManager from "./components/listers/VehicleManagementSystemCards"
-import VehicleManagementSystemDetail from "./components/listers/VehicleManagementSystemDetail"
+import CarMgmtManager from "./components/listers/CarMgmtCards"
+import CarMgmtDetail from "./components/listers/CarMgmtDetail"
 
 
 import TotalCarListView from "./components/TotalCarListView"
 import TotalCarListViewDetail from "./components/TotalCarListViewDetail"
-import MemberManagementSystemManager from "./components/listers/MemberManagementSystemCards"
-import MemberManagementSystemDetail from "./components/listers/MemberManagementSystemDetail"
+import MemberMgmtManager from "./components/listers/MemberMgmtCards"
+import MemberMgmtDetail from "./components/listers/MemberMgmtDetail"
+
+import PaymentManager from "./components/listers/PaymentCards"
+import PaymentDetail from "./components/listers/PaymentDetail"
 
 
 export default new Router({
@@ -23,25 +26,25 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
             {
-                path: '/carRentSystems',
-                name: 'CarRentSystemManager',
-                component: CarRentSystemManager
+                path: '/carRents',
+                name: 'CarRentManager',
+                component: CarRentManager
             },
             {
-                path: '/carRentSystems/:id',
-                name: 'CarRentSystemDetail',
-                component: CarRentSystemDetail
+                path: '/carRents/:id',
+                name: 'CarRentDetail',
+                component: CarRentDetail
             },
 
             {
-                path: '/vehicleManagementSystems',
-                name: 'VehicleManagementSystemManager',
-                component: VehicleManagementSystemManager
+                path: '/carMgmts',
+                name: 'CarMgmtManager',
+                component: CarMgmtManager
             },
             {
-                path: '/vehicleManagementSystems/:id',
-                name: 'VehicleManagementSystemDetail',
-                component: VehicleManagementSystemDetail
+                path: '/carMgmts/:id',
+                name: 'CarMgmtDetail',
+                component: CarMgmtDetail
             },
 
 
@@ -56,14 +59,25 @@ export default new Router({
                 component: TotalCarListViewDetail
             },
             {
-                path: '/memberManagementSystems',
-                name: 'MemberManagementSystemManager',
-                component: MemberManagementSystemManager
+                path: '/memberMgmts',
+                name: 'MemberMgmtManager',
+                component: MemberMgmtManager
             },
             {
-                path: '/memberManagementSystems/:id',
-                name: 'MemberManagementSystemDetail',
-                component: MemberManagementSystemDetail
+                path: '/memberMgmts/:id',
+                name: 'MemberMgmtDetail',
+                component: MemberMgmtDetail
+            },
+
+            {
+                path: '/payments',
+                name: 'PaymentManager',
+                component: PaymentManager
+            },
+            {
+                path: '/payments/:id',
+                name: 'PaymentDetail',
+                component: PaymentDetail
             },
 
 

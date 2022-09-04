@@ -10,9 +10,9 @@ import lombok.*;
 public class Rented extends AbstractEvent {
 
     private Long rentId;
-    private String rentStatus;
+    private String status;
 
-    public Rented(CarRentSystem aggregate) {
+    public Rented(CarRent aggregate) {
         super(aggregate);
     }
 

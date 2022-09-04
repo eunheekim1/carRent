@@ -41,7 +41,7 @@ logging:
 
 api:
   url:
-    carRental: localhost:8081
+    payment: localhost:8085
 
 server:
   port: 8081
@@ -74,5 +74,5 @@ spring:
 
 api:
   url:
-    carRental: carRental:8080
+    payment: payment:8080
 
